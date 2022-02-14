@@ -4,7 +4,8 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 
 const app = express();
-const port = process.env.port || 3000;
+// const port = process.env.port || 3000;
+app.set('port', process.env.PORT || 3000)
 
 // MongoDB - CONECCTION
 mongoose.connect('mongodb+srv://goloro:goloro@golopop.5soj7.mongodb.net/GoloPop?retryWrites=true&w=majority');
@@ -27,4 +28,4 @@ app.use(cors({origin: "*"}))
 
 routerApi(app);
 
-app.listen(port);
+app.listen(app.get('port'));
