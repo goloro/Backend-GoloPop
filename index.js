@@ -4,7 +4,7 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 
 const app = express();
-const port = 3000;
+const port = process.env.port || 3000;
 
 // MongoDB - CONECCTION
 mongoose.connect('mongodb+srv://goloro:goloro@golopop.5soj7.mongodb.net/GoloPop?retryWrites=true&w=majority');
