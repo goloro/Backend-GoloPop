@@ -7,7 +7,7 @@ const router = express.Router();
 const service = new OrdersService();
 
 // Create order
-router.get ('/add', async (req, res) => {
+router.post ('/add', async (req, res) => {
     res.json(await service.addOrder(req.body))
 })
 
