@@ -29,7 +29,7 @@ class OrdersService {
     // Get by email
     async findByEmail(email) {
         try {
-            const order = await orderSchema.findOne({email: email});
+            const order = await orderSchema.find({email: email});
             return order;
         } catch(error) {
             return error;
