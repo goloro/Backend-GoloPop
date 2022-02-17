@@ -8,6 +8,7 @@ const orderSchema = new Schema({
     products: Array,
     status: String,
     credit: String,
+    totalPrice: String,
 });
 
 module.exports = mongoose.model('Order', orderSchema)
