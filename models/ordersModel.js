@@ -4,17 +4,10 @@ const Schema = mongoose.Schema;
 
 const orderSchema = new Schema({
     email: String,
-    address: {
-        contry: String,
-        fullName: String,
-        phone: String,
-        address1: String,
-        postalCode: String,
-        city: String,
-        province: String,
-    },
+    address: String,
     products: Array,
     status: String,
+    credit: String,
 });
 
 module.exports = mongoose.model('Order', orderSchema)
